@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=fortunate
+Exec=fortunate
+Icon=com.tsbarnes.Fortunate
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true

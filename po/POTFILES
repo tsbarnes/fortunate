@@ -1,0 +1,7 @@
+data/com.tsbarnes.Fortunate.desktop.in
+data/com.tsbarnes.Fortunate.appdata.xml.in
+data/com.tsbarnes.Fortunate.gschema.xml
+src/window.ui
+src/main.py
+src/window.py
+
