@@ -17,6 +17,7 @@
 
 import os
 import sys
+import textwrap
 import gi
 
 gi.require_version('Gtk', '4.0')
@@ -36,7 +37,7 @@ class Application(Gtk.Application):
         if not win:
             win = FortunateWindow(application=self)
         fortune = os.popen("fortune").read()
-        win.label.set_text(fortune)
+        win.textview.get_buffer().set_text(fortune)
         self.create_action('about', self.on_about_action)
         self.create_action('preferences', self.on_preferences_action)
         self.create_action('refresh', self.on_refresh_action)
@@ -49,9 +50,9 @@ class Application(Gtk.Application):
     def on_refresh_action(self, widget, _):
         if not self.props.active_window:
             return
-        label = self.props.active_window.label
+        textview = self.props.active_window.textview
         fortune = os.popen("fortune").read()
-        label.set_text(fortune)
+        textview.get_buffer().set_text(fortune)
 
     def on_preferences_action(self, widget, _):
         print('app.preferences action activated')

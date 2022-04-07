@@ -22,7 +22,7 @@ from gi.repository import Gtk
 class FortunateWindow(Gtk.ApplicationWindow):
     __gtype_name__ = 'FortunateWindow'
 
-    label = Gtk.Template.Child()
+    textview = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
