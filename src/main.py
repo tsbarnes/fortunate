@@ -36,6 +36,7 @@ class Application(Gtk.Application):
         win = self.props.active_window
         if not win:
             win = FortunateWindow(application=self)
+        win.textview.set_monospace(True)
         fortune = os.popen("fortune").read()
         win.textview.get_buffer().set_text(fortune)
         self.create_action('about', self.on_about_action)
