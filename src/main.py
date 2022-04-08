@@ -20,7 +20,7 @@ import sys
 import textwrap
 import gi
 
-gi.require_version('Gtk', '4.0')
+gi.require_version('Gtk', '3.0')
 
 from gi.repository import Gtk, Gio
 
@@ -42,6 +42,7 @@ class Application(Gtk.Application):
         self.create_action('about', self.on_about_action)
         self.create_action('preferences', self.on_preferences_action)
         self.create_action('refresh', self.on_refresh_action)
+        win.show_all()
         win.present()
 
     def on_about_action(self, widget, _):
